@@ -1,0 +1,28 @@
+# ====================== USER CONFIG ======================
+samples:
+  - sample1
+  - sample2
+  # Add your sample names here (must match fastq naming)
+
+fastq:
+  dir: "fastq"                    # directory containing raw FASTQ files
+  suffix_R1: "_R1.fastq.gz"
+  suffix_R2: "_R2.fastq.gz"
+
+outdir: "results"
+threads: 16
+
+# ====================== REFERENCE ======================
+ref:
+  fasta: "/path/to/your/reference/hg38.fa"   # must be BWA-indexed + .dict + .fai
+
+# ====================== TRIMMOMATIC ======================
+adapter_file: "resources/adapters/TruSeq3-PE.fa"
+
+# ====================== ANNOVAR ======================
+annovar:
+  table_annovar: "/path/to/annovar/table_annovar.pl"
+  humandb: "/path/to/annovar/humandb"
+  buildver: "hg38"
+  protocol: "refGene,knownGene,ensGene,avsnp150,clinvar_20240611,dbnsfp42a,gnomad211_exome,exac03nonpsych,1000g2015aug_all"
+  operation: "g,g,g,f,f,f,f,f,f"
