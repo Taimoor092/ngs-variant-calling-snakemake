@@ -1,0 +1,15 @@
+name: ngs-pipeline
+channels:
+  - bioconda
+  - conda-forge
+  - defaults
+dependencies:
+  - snakemake >=8.0
+  - fastqc
+  - trimmomatic
+  - bwa
+  - samtools
+  - gatk
+  - multiqc
+  - python
+  - conda-forge::openjdk   # needed for trimmomatic/gatk
