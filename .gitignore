@@ -1,0 +1,28 @@
+# Snakemake
+.snakemake/
+logs/
+benchmarks/
+
+# Generated results
+results/
+annotated/
+variants/
+aligned/
+trimmed/
+fastqc/
+
+# Conda
+*.conda
+*.lock
+env/
+
+# Temporary
+*.tmp
+*.log
+*.bai
+*.vcf.idx
+*.tbi
+
+# OS
+.DS_Store
+Thumbs.db
